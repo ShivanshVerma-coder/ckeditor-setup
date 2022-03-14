@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CK Editor</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="editor">abcd</div>
+      <div id="editor-toolbar"></div>
+    </div>
+    <script src="./build/ckeditor.js"></script>
+    <script>
+      DecoupledDocumentEditor.create(document.querySelector("#editor"), {
+        language: "en",
+        // toolbar: ,
+        toolbar: {
+          // [
+          //   "heading",
+          //   "|",
+          //   "bold",
+          //   "italic",
+          //   "link",
+          //   "bulletedList",
+          //   "numberedList",
+          //   "blockQuote",
+          //   "insertTable",
+          //   "undo",
+          //   "redo",
+          // ]
+          //   shouldNotGroupWhenFull: false,
+        },
+      })
+        .then((editor) => {
+          window.editor = editor;
+
+          // Set a custom container for the toolbar.
+          console.log(Array.from(editor.ui.componentFactory.names()));
+          document
+            .querySelector("#editor-toolbar")
+            .appendChild(editor.ui.view.toolbar.element);
+        })
+        .catch((error) => {
+          console.error("Oops, something went wrong!");
+          console.error(
+            "Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:"
+          );
+          console.warn("Build id: othami72vmby-daqnt5ni0pnx");
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
