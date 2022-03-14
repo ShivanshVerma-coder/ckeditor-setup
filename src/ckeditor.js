@@ -67,7 +67,7 @@ class Editor extends DecoupledDocumentEditor {}
 // Plugins to include in the build.
 Editor.builtinPlugins = [
   //customplugins
-  //   Custom1,
+  Custom1,
   Alignment,
   Autoformat,
   AutoImage,
@@ -129,7 +129,7 @@ Editor.builtinPlugins = [
 Editor.defaultConfig = {
   toolbar: {
     items: [
-      //   "custom1",
+      "custom1",
       "link",
       "blockQuote",
       "imageUpload",
