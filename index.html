@@ -35,6 +35,10 @@
       })
         .then((editor) => {
           window.editor = editor;
+          //listen on event listener of editor
+          editor.on("custom1", (event) => {
+            console.log("milgaya bhai");
+          });
 
           // Set a custom container for the toolbar.
           console.log(Array.from(editor.ui.componentFactory.names()));

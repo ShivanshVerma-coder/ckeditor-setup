@@ -1,7 +1,7 @@
 import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
 import ButtonView from "@ckeditor/ckeditor5-ui/src/button/buttonview";
 
-import imageIcon from "./custom1.svg";
+import imageIcon from "./tweet.svg";
 
 // create plugin
 export default class Custom1 extends Plugin {
@@ -18,9 +18,7 @@ export default class Custom1 extends Plugin {
       });
       // listen to click event
       view.on("execute", () => {
-        alert("custom button clicked");
-        // insert custom element
-        // this.editor.model.insertContent("custom1");
+        editor.fire("custom1");
       });
       return view;
     });

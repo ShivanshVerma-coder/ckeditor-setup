@@ -197,4 +197,8 @@ Editor.defaultConfig = {
   },
 };
 
+export function getEditor() {
+  return Editor;
+}
+
 export default Editor;
