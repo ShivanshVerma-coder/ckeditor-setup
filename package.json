@@ -1,7 +1,7 @@
 {
-  "name": "ckeditor5-ro-cadence",
+  "name": "ckeditor5-setup",
   "author": "Shivansh Verma",
-  "description": "A custom CKEditor made for Ringover.",
+  "description": "A custom CKEditor5 setup along with example of custom plugin",
   "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "./build/ckeditor.js",
